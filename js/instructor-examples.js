@@ -93,3 +93,29 @@
 //   names: 'Jacob,William,Solomon,Artemis',
 //   phones: '89001234567,89001112233,890055566377,890055566300',
 // });
+
+// Example 3 - Глубокая деструктуризация
+// Перепиши функцию так, чтобы она принимала один объект параметров,
+// вместо набора независимых аргументов.
+
+// function getBotReport(companyName, repairBots, defenceBots) {
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// }
+
+// Было
+// console.log(getBotReport('Cyberdyne Systems', 150, 50));
+
+// Ожидается
+// const getBotReport = function ({ companyName, bots: { repair, defence } }) {
+//   return `${companyName} has ${repair + defence} bots in stock`;
+// };
+
+// console.log(
+//   getBotReport({
+//     companyName: 'Cyberdyne Systems',
+//     bots: {
+//       repair: 150,
+//       defence: 50,
+//     },
+//   }),
+// ); // "Cyberdyne Systems has 200 bots in stock"
