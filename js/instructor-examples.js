@@ -119,3 +119,95 @@
 //     },
 //   }),
 // ); // "Cyberdyne Systems has 200 bots in stock"
+
+// Example 4 - Деструктуризация
+// Перепиши функцию так, чтобы она принимала объект параметров со
+// свойствами companyName и stock и выводила репорт о
+// количестве товаров на складе любой компании.
+// Решение
+// const getStockReport = function ({ companyName, stock }) {
+//   let total = 0;
+//   const values = Object.values(stock);
+//   for (let value of values) {
+//     total += value;
+//   }
+//   return `${companyName} has ${total} items in stok`;
+// };
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdyne Systems',
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   }),
+// ); // "Cyberdyne Systems has 200 items in stock"
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Belacci',
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   }),
+// ); // "Belacci has 35 item in stock"
+
+// Example 5 - Операция spread
+// Дополни функцию createContact(partialContact) так,
+// чтобы она возвращала новый объект контакта с добавленными свойствами id и createdAt,
+// а также list со значением "default" если в partialContact нет такого свойства.
+// function createContact(partialContact) {
+//   return {
+//     list: 'default',
+//     ...partialContact,
+//     id: generateId(),
+//     createdAt: Date.now(),
+//   };
+// }
+
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   }),
+// );
+// function generateId() {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// }
+
+// Example 6 - Операция rest
+// Напиши функцию transformUsername(user) так,
+// чтобы она возвращала новый обьект со свойством fullName,
+// вместо firstName и lastName.
+// const transformUsername = function () {};
+
+// Решение
+// function transformUsername({ firstName, lastName, ...otherProps }) {
+//   return {
+//     fullName: `${firstName} ${lastName}`,
+//     ...otherProps,
+//   };
+// }
+// console.log(
+//   transformUsername({
+//     id: 1,
+//     firstName: 'Jacob',
+//     lastName: 'Mercer',
+//     email: 'j.mercer@mail.com',
+//     friendCount: 40,
+//   }),
+// );
+
+// console.log(
+//   transformUsername({
+//     id: 2,
+//     firstName: 'Adrian',
+//     lastName: 'Cross',
+//     email: 'a.cross@hotmail.com',
+//     friendCount: 20,
+//   }),
+// );
