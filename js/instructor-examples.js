@@ -42,7 +42,6 @@
 //     return Number((numericWeight / numericHeight ** 2).toFixed(1));
 // };
 
-
 // console.log(
 //   calcBMI({
 //     weight: '88,3',
@@ -62,7 +61,6 @@
 //   }),
 // );
 
-
 // Example 2 - Деструктуризация
 // Перепиши функцию так, чтобы она принимала один объект параметров,
 // вместо набора независимых аргументов.
@@ -75,22 +73,21 @@
 //   }
 // }
 
-// Было
+// // Было
 // printContactsInfo(
 //   'Jacob,William,Solomon,Artemis',
 //   '89001234567,89001112233,890055566377,890055566300',
 // );
 
-
 // =====================================================================================
 
-// const printContactsInfo = function ({phones, names}) {
-//     const nameList = names.split(',');
-//     const phonesList = phones.split(',');
-//     for (let i = 0; i < nameList.length; i += 1){
-//         console.log(`${nameList[i]}: ${phonesList[i]}`)
-//     }
-// }
+// const printContactsInfo = function ({ phones, names }) {
+//   const nameList = names.split(',');
+//   const phonesList = phones.split(',');
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phonesList[i]}`);
+//   }
+// };
 // // Ожидается
 // printContactsInfo({
 //   names: 'Jacob,William,Solomon,Artemis',
